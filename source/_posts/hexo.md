@@ -45,7 +45,7 @@ $ npm install hexo-deployer-git --save
 ```
 deploy:
   type: git
-  repo: git@github.com:ljm0816/blog.git
+  repo: git@github.com:paowx/blog.git
   branch: master
   massage: 
 ```
@@ -90,5 +90,5 @@ theme: hueman
 root: /blog/
 
 ### 3、更换主题后，打包发布失败
-检查主题包中是否有_config.yml文件，如果_config.yml.example文件没有_config.yml，将_config.yml.example改成_config.yml即可
+检查主题包中是否有_config.yml文件，如果有_config.yml.example文件没有_config.yml，将_config.yml.example重命名为_config.yml即可
 
