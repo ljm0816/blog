@@ -31,3 +31,34 @@ var arg2 = {b: 2}
 }(arg1,arg2)
 console.log(JSON.stringify(arg1), JSON.stringify(arg2)) // {a: 1},{b:2, c:2}
 ```
+
+```
+var User = {
+  count: 1,
+  getCount: function() {
+    return this.count;
+  }
+};
+var func = User.getCount;
+console.log(func() , User.getCount()); // undefined, 1
+```
+
+```
+// 6.下面这个ul，如何点击每一列的时候alert其index?  要求: 请用JavaScript
+
+<ul id="test">
+<li>这是第一条</li>
+<li>这是第二条</li>
+<li>这是第三条</li>
+</ul>
+
+
+let elems = document.getElementById('test').children
+for (var i=0; i<elems.length; i++) {
+  elems[i].onclick = function (index) {
+    function () {
+    	alert(index)
+    }
+  }(i)
+}
+```
