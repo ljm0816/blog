@@ -52,7 +52,6 @@ console.log(func() , User.getCount()); // undefined, 1
 <li>这是第三条</li>
 </ul>
 
-
 let elems = document.getElementById('test').children
 for (var i=0; i<elems.length; i++) {
   elems[i].onclick = function (index) {
