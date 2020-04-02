@@ -1,7 +1,7 @@
 ---
 title: 前端面试题
 date: 2020-03-24 17:18:46
-tags:
+tags: 前端面试题
 ---
 ```
 var a = "11" + 2 - "1"
@@ -61,3 +61,60 @@ for (var i=0; i<elems.length; i++) {
   }(i)
 }
 ```
+
+```
+什么样的 a 可以满足 (a === 1 && a === 2 && a === 3) === true 呢？(注意是 3 个 =，也就是严格相等)
+
+var count = 0
+Object.defineProtery(window, 'a', {
+    get() {
+        count ++
+        return count
+    }
+})
+```
+
+```
+多继承， 怎样实现一个对象同时继承两个对象？
+
+var foo = {
+    foo() {
+        console.log('foo')
+    }
+}
+var bar = {
+    bar() {
+        console.log('bar')
+    }
+}
+var sub = new Proxy({}, {
+    get(target, key, reciever) {
+        return target[key] || foo[key] || bar[key]
+    }
+})
+
+sub.foo()
+sub.bar()
+```
+
+```
+function Foo() {
+    getName = function () { console.log(1); };
+    return this;
+}
+Foo.getName = function () { console.log(2);};
+Foo.prototype.getName = function () { console.log(3);};
+var getName = function () { console.log(4);};
+function getName() { console.log(5);}
+
+//请写出以下输出结果：
+Foo.getName(); // 2
+getName(); // 4; 函数声明和函数表达式，变量提升
+Foo().getName(); // 1; Foo()返回this，this指向windows
+getName(); // 1; 执行了第三行代码后，window.getName的值已改变
+new Foo.getName(); // 2;  表达式的优先级，等于new (Foo.getName)();
+new Foo().getName(); // 3; (new Foo()).getName()
+new new Foo().getName(); // 3; new ((new Foo()).getName)()
+```
+
+
