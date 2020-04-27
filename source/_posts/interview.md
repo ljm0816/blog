@@ -117,4 +117,36 @@ new Foo().getName(); // 3; (new Foo()).getName()
 new new Foo().getName(); // 3; new ((new Foo()).getName)()
 ```
 
+```
+var elem = document.getElementById('test')
+    elem.onclick = function () {
+        console.log(1)
+    }
+    elem.onclick = function () {
+        console.log(2)
+    }
+    elem.addEventListener('click', function() {
+        console.log(3)
+    })
+    elem.addEventListener('click', function() {
+        console.log(4)
+    })
+    
+    输出结果：2 3 4
+    
+    onclick与addEventLister的区别：
+    1、onclick在同一时间只能指向唯一对象
+    2、addEventLister可以给一个事件注册多个监听器
+    3、addEventLister提供了一种更精细的手段控制 listener 的触发阶段。（即可以选择捕获或者冒泡）
+    4、addEventLister对任何 DOM 元素都是有效的，而不仅仅只对 HTML 元素有效
+```
 
+```
+js判断数组类型的方法
+
+1、if(typeof a === 'obiect' && Array.isArray(a)){}
+
+2、if(a instanceof Array){}
+
+3、if(Object.prototype.toString.call(a) === '[object Array]'){}
+```
