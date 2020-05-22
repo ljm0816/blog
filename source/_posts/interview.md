@@ -6,6 +6,9 @@ tags: 前端面试题
 ```
 var a = "11" + 2 - "1"
 console.log(a, typeof a)  // 111, number
+console.log('A'-'B'+2) // NaN
+console.log('A'-'B'+'2') // NaN2
+console.log(false == 0) // true
 ```
 
 ```
@@ -118,6 +121,21 @@ new new Foo().getName(); // 3; new ((new Foo()).getName)()
 ```
 
 ```
+var x = 30
+function test() {
+    console.log(x)
+    var x = 10
+    console.log(x)
+    x = 20
+    function x(){}
+    console.log(x)
+}
+test()
+
+fucntion x(){}  10 20
+```
+
+```
 var elem = document.getElementById('test')
     elem.onclick = function () {
         console.log(1)
@@ -144,7 +162,7 @@ var elem = document.getElementById('test')
 ```
 js判断数组类型的方法
 
-1、if(typeof a === 'obiect' && Array.isArray(a)){}
+1、if(typeof a === 'object' && Array.isArray(a)){}
 
 2、if(a instanceof Array){}
 
