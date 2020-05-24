@@ -2,6 +2,7 @@
 title: vue 路由拦截
 date: 2020-03-16 18:11:54
 tags: [vue,router]
+thumbnail: /blog/images/vue.png
 ---
 
 我们在开发项目的时候，有些页面是需要登录后才能访问的，这时就需要用到路由拦截, 在路由钩子的beforeEach方法中处理

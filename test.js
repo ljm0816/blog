@@ -1,20 +1,41 @@
 setTimeout(function(){
-    console.log(4)
+    console.log(1)
+  new Promise(function(resolve){
+    resolve()
+  }).then(function () {
+    console.log(2)
+  })
 }, 0)
 
 new Promise(function(resolve){
-    console.log(1)
+    console.log(3)
     for(let i = 0; i < 10000; i++){
         i===9999 && resolve()
     }
-    // setTimeout(function(){
-    //     resolve()
-    // })
-    console.log(2)
+    console.log(4)
 }).then(function () {
     console.log(5)
 })
-console.log(3)
+
+console.log(6)
+
+
+setTimeout(function(){
+  console.log(4)
+}, 0)
+
+async function main() {
+  console.log(1)
+  await Promise.resolve()
+  console.log(3)
+}
+
+main()
+
+console.log(2)
+
+
+
 
 
 // for(var i=0; i<5; i++){

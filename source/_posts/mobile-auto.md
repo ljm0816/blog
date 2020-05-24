@@ -2,6 +2,7 @@
 title: 移动端 适配
 date: 2020-03-14 21:46:50
 tags: [web, mobile]
+thumbnail: /blog/images/mobile.jpeg
 ---
 
 **demo : https://github.com/HuJiaoHJ/h5-layout

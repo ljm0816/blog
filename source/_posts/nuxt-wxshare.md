@@ -2,6 +2,7 @@
 title: nuxt.js中实现微信分享功能
 date: 2020-03-20 10:45:20
 tags: [nuxt, 微信]
+thumbnail: /blog/images/nuxt.jpeg
 ---
 
 在plugins中新建wx-share.js文件，代码如下：
