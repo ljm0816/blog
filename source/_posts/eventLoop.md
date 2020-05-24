@@ -2,7 +2,7 @@
 title: Event Loop 与宏任务微任务
 date: 2020-05-24 12:38:32
 tags: javascript
-thumbnail: /blog/images/eventLoop.jpg
+thumbnail: /blog/images/eventloop.jpg
 ---
 
 javascript是一种单线程语言，所有任务都会在一个线程里面完成。为解决单线程带来的一些问题，javascript 引入Event Loop这种运行机制。
